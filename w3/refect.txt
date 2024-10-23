@@ -1,0 +1,15 @@
+/* -----------------------------------------------------------
+Name : Hanbi Gong            
+Seneca email : hgong12@myseneca.ca         
+Seneca Student ID : 111932224
+Date : May 26th, 2024
+
+I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+***********************************************************************/
+<reflect>
+
+In this workshop, I learned how to handle dynamic memory in C++ with the ProteinDatabase and TimedTask classes. A key point of this workshop was understanding the difference between copying and moving data. Copying means making a complete duplicate of an object, which can take a lot of time, especially with big data. For example, in the ProteinDatabase class, the copy constructor and copy assignment operator create new memory and copy each string, which is slower.
+
+Moving data is faster because it just moves the data's ownership without making a copy. In ProteinDatabase, the move constructor and move assignment operator simply change the pointers and set the source object's pointers to nullptr. This is considered in the operator=(ProteinDatabase&& other) noexcept function, where it just reassigns the pointers instead of copying the data.
+
+I had some trouble managing file input and making sure there were no memory leaks. But by being careful with memory allocation and using smart pointers, I solved these problems. This workshop helped me understand how to manage resources better and showed me how move operations can make my code run faster.
