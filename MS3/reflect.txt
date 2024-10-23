@@ -1,3 +1,52 @@
+/* -----------------------------------------------------------
+// Name: Hanbi Gong
+// Seneca Student ID: 111932224
+// Seneca email: hgong12@myseneca.ca
+// Date of completion: Aug 2nd, 2024
+//
+// I confirm that I am the only author of this file
+//   and the content was created entirely by me.
+***********************************************************************/
 
+In this milestone, I faced several problems with the attemptToMoveOrder method. 
+Understanding the overall logic took a lot of time. When working on Milestone 1 and 2, I focused on each function individually, so I didn't fully understand how everything worked together. This lack of understanding made it hard to see how each part connected and how the whole process worked.
 
-ms
+Problem 1: Lack of Understanding of the Overall Process
+Working on the project, I realized that implementing each function without knowing the overall process was risky. 
+Milestone 1 and 2 focused on individual functions, but in Milestone 3, understanding the entire flow was necessary to see how functions interact. 
+I learned that it was essential to grasp the whole process, including how orders move through stations and are added to the final lists.
+
+Problem 2: Difficulty Understanding Conditions
+The conditions in the attemptToMoveOrder method were initially hard to grasp. Here are some of the conditions I struggled with:
+
+if (m_orders.empty())
+->This condition checks if the station’s order list is empty. If it is, there are no orders to process, so the method returns false and ends. 
+Understanding that this means no work needs to be done at this station was essential.
+
+if (m_orders.front().isItemFilled(getItemName()) || getQuantity() < 1)
+->This condition checks two things:
+  1) isItemFilled(getItemName()): Whether the current station's order has the needed item.
+  2) getQuantity() < 1: Whether the current station has enough stock.
+This condition combines two checks, and understanding what happens when it is true or false was challenging.
+
+if (m_pNextStation != nullptr)
+-> This condition checks if there is a next station set. 
+If there is, it moves the order to the next station. If not, it adds the order to the completed or incomplete list. 
+Understanding the role of this condition in the process was important.
+
+if (m_orders.front().isOrderFilled())
+-> This condition checks if the order at the current station is completely filled. 
+If it is, the order goes into the completed list; otherwise, it goes into the incomplete list. Understanding how this determines the final status of an order was crucial.
+
+Solution 1: Review the Overall Process
+While working on Milestone 3, I reviewed Milestone 1 and 2. 
+This helped me understand how each function works within the entire system and the role of each condition and logic. 
+By understanding the whole process, I was able to see how individual functions connect, which made solving problems much easier.
+
+Solution 2: Add Documentation and Comments
+I added comments and documentation to the code to explain the purpose of each condition and logic. 
+For example, I added comments to explain why if (m_orders.empty()) checks for an empty order list and why if (m_orders.front().isItemFilled(getItemName()) || getQuantity() < 1) checks two things. 
+This improved code readability and helped with future modifications and debugging. I made sure to explain why each condition is needed and how it contributes to the overall logic.
+
+By addressing these issues, I gained a clearer understanding of the attemptToMoveOrder method and how it fits into the overall system. 
+This assignment is special to me because I spent a lot of time on it over the past two weeks. It helped me review everything I learned this semester while preparing for the final exams. So, it was useful and beneficial for my exam preparation.
